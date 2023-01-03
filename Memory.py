@@ -118,7 +118,7 @@ def mouseclick(pos):
                     index_list.pop(-2)
                     index_list.pop(-2)
 
-        """" Congratulatory Message """
+        """" hide tiles when game is completed """
         if len(index_list) == 16:
             exposed = [False] * 16
             
