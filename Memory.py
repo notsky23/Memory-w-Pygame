@@ -1,36 +1,47 @@
 # implementation of card game - Memory
 import sys
 import pygame
+import pygame.mouse
 from pygame.locals import *
 import random
 
 pygame.init()
 
-WIDTH = 800 * 1.5
-HEIGHT = 100
+#colors
+BLACK = (0,0,0)
+WHITE = (255,255,255)
+YELLOW = (255,255,0)
+RED = (255,0,0)
+GREEN = (0,255,0)
+BLUE = (0,0,255)
+
+CARDWIDTH = 75
+CARDHEIGHT = 100
+WIDTH = CARDWIDTH * 17
+HEIGHT = CARDHEIGHT
 
 # Load images
 CARD_BACK = pygame.image.load("Assets/CardBack.jpg")
-CARD_BACK = pygame.transform.scale(CARD_BACK, (75, 100))
+CARD_BACK = pygame.transform.scale(CARD_BACK, (CARDWIDTH, CARDHEIGHT))
 # CARD_BACK_WIDTH = 236
 # CARD_BACK_HEIGHT = 355
 
 ACE = pygame.image.load('Assets/AceDiamond.png')
-ACE = pygame.transform.scale(ACE, (75, 100))
+ACE = pygame.transform.scale(ACE, (CARDWIDTH, CARDHEIGHT))
 TWO = pygame.image.load('Assets/2Spade.png')
-TWO = pygame.transform.scale(TWO, (75, 100))
+TWO = pygame.transform.scale(TWO, (CARDWIDTH, CARDHEIGHT))
 THREE = pygame.image.load('Assets/3Heart.png')
-THREE = pygame.transform.scale(THREE, (75, 100))
+THREE = pygame.transform.scale(THREE, (CARDWIDTH, CARDHEIGHT))
 FOUR = pygame.image.load('Assets/4Club.png')
-FOUR = pygame.transform.scale(FOUR, (75, 100))
+FOUR = pygame.transform.scale(FOUR, (CARDWIDTH, CARDHEIGHT))
 FIVE = pygame.image.load('Assets/5Diamond.png')
-FIVE = pygame.transform.scale(FIVE, (75, 100))
+FIVE = pygame.transform.scale(FIVE, (CARDWIDTH, CARDHEIGHT))
 SIX = pygame.image.load('Assets/6Spade.png')
-SIX = pygame.transform.scale(SIX, (75, 100))
+SIX = pygame.transform.scale(SIX, (CARDWIDTH, CARDHEIGHT))
 SEVEN = pygame.image.load('Assets/7Heart.png')
-SEVEN = pygame.transform.scale(SEVEN, (75, 100))
+SEVEN = pygame.transform.scale(SEVEN, (CARDWIDTH, CARDHEIGHT))
 EIGHT = pygame.image.load('Assets/8Club.png')
-EIGHT = pygame.transform.scale(EIGHT, (75, 100))
+EIGHT = pygame.transform.scale(EIGHT, (CARDWIDTH, CARDHEIGHT))
 # CARD_WIDTH = 200
 # CARD_HEIGHT = 250
 
@@ -40,12 +51,10 @@ CARDS = [ACE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT] * 2
 # helper function to initialize globals
 def new_game():
     """ Initial condition of new game"""
-    global state, exposed, index_list, turns, color
+    global state, exposed, index_list, turns
     
     state = 0
     turns = 0
-    color = "Green"
-    # label.set_text("Turns = " + str(turns))
     random.shuffle(CARDS)
     exposed = [False] * 16
     """ list of index of flipped up cards """
@@ -67,7 +76,7 @@ def button(screen, position, text):
 # define event handlers
 def mouseclick(pos):
     # add game state logic here
-    global state, exposed, index_list, turns, color
+    global state, exposed, index_list, turns
     
     """ if game is not complete, run code """
     if len(index_list) < 16:
@@ -84,7 +93,6 @@ def mouseclick(pos):
             
                 """ count number of turns """
                 turns += 1
-                # label.set_text("Turns = " + str(turns))
             
                 """ state 1 -> 1 card face up """
             elif state == 1:
@@ -100,7 +108,6 @@ def mouseclick(pos):
             
                 """ count number of turns """
                 turns += 1
-                # label.set_text("Turns = " + str(turns))
             
                 """ determine if cards are not pairs """
                 if CARDS[index_list[-3]] != CARDS[index_list[-2]]:
@@ -110,75 +117,72 @@ def mouseclick(pos):
                     """ if cards are not pairs, delete from pair list """
                     index_list.pop(-2)
                     index_list.pop(-2)
-        
+
         """" Congratulatory Message """
         if len(index_list) == 16:
             exposed = [False] * 16
-            color = "Black"
             
-# cards are logically 50x100 pixels in size    
+# cards are logically 75x100 pixels in size
 def draw(canvas):
 
     canvas.fill((0,0,0))
-
-    # create button
-    restartButton = button(window, (5, HEIGHT / 3), "Restart")
 
     # draw cards
     for card_index in range(len(CARDS)):
         card_pos = (75 * card_index) + 75
         """" Draw card layout flipped up """
-#        canvas.draw_polygon([(card_pos, 0), (card_pos, HEIGHT),
-#                ((card_pos + 75), HEIGHT), ((card_pos + 75), 0)],
-#                1, "Black")
-#         canvas.draw_image(CARDS[card_index], ((CARD_WIDTH / 2), (CARD_HEIGHT / 2)),
-#                 ((CARD_WIDTH), (CARD_HEIGHT)), ((card_pos + (75 / 2)), (HEIGHT / 2)),
-#                 ((75), (100)))
         canvas.blit(CARDS[card_index], (card_pos, 0))
     
         """" Draw card layout flipped down """
         if exposed[card_index] == False:
-            # canvas.draw_image(CARD_BACK, ((CARD_BACK_WIDTH / 2), (CARD_BACK_HEIGHT / 2)),
-            #     ((CARD_BACK_WIDTH), (CARD_BACK_HEIGHT)), ((card_pos + (75 / 2)), (HEIGHT / 2)),
-            #     (75, 100))
             canvas.blit(CARD_BACK, (card_pos, 0))
-            
+
+    # Messages at game end
     if len(index_list) == 16:
-        canvas.draw_text("CONGRATULATIONS!", (230, 60), 75, "White")
-        canvas.draw_text("Press restart to play another game.", (400, 90), 30, "Yellow")
+        # Congratulatory message
+        font1 = pygame.font.SysFont("Times New Roman", 60)
+        label1 = font1.render("CONGRATULATIONS!", True, WHITE)
+        canvas.blit(label1, (350, -5))
 
-    for event in pygame.event.get():
+        # Instructions after game end
+        font2 = pygame.font.SysFont("Times New Roman", 30)
+        label2 = font2.render("Press restart to play another game.", True, YELLOW)
+        canvas.blit(label2, (450, 55))
 
-        if event.type == pygame.MOUSEBUTTONDOWN:
-            mousePosition = pygame.mouse.get_pos()
-            if CARD_BACK.get_rect().collidepoint(mousePosition):
-                mouseclick(mousePosition)
-            elif restartButton.collidepoint(mousePosition):
-                new_game()
-
-        elif event.type == QUIT:
-            pygame.quit()
-            sys.exit()
 
 # create frame and add a button and labels
-# frame = simplegui.create_frame("Memory", WIDTH, HEIGHT)
-# frame.add_button("Restart", new_game)
-# label = frame.add_label("Turns = " + str(turns))
 window = pygame.display.set_mode((WIDTH, HEIGHT), 0, 32)
 pygame.display.set_caption("Memory")
 
-# # register event handlers
-# frame.set_mouseclick_handler(mouseclick)
-# frame.set_draw_handler(draw)
-#
-# # get things rolling
-# new_game()
-# frame.start()
-
+# get things rolling
 new_game()
+
 while True:
 
     draw(window)
+
+    # create button
+    restartButton = button(window, (5, HEIGHT / 10), "Restart")
+
+    # draw scores
+    scoreFont = pygame.font.SysFont("Comic Sans MS", 16)
+    scoreLabel = scoreFont.render("Turns: " + str(turns), True, WHITE)
+    window.blit(scoreLabel, (5, 60))
+
+    # mouseclick event listener
+    for event in pygame.event.get():
+
+        if event.type == pygame.MOUSEBUTTONDOWN:
+            x, y = pygame.mouse.get_pos()
+            for i in range(75,(75*17),75):
+                if CARD_BACK.get_rect(topleft=(i, 0)).collidepoint(x, y):
+                    mouseclick((x - 75, y))
+            if restartButton.collidepoint(x, y):
+                new_game()
+
+        if event.type == QUIT:
+            pygame.quit()
+            sys.exit()
 
     pygame.display.update()
 
