@@ -150,41 +150,45 @@ def draw(canvas):
         canvas.blit(label2, (450, 55))
 
 
-# create frame and add a button and labels
-window = pygame.display.set_mode((WIDTH, HEIGHT), 0, 32)
-pygame.display.set_caption("Memory")
+def main():
+    # create frame and add a button and labels
+    window = pygame.display.set_mode((WIDTH, HEIGHT), 0, 32)
+    pygame.display.set_caption("Memory")
 
-# get things rolling
-new_game()
+    # get things rolling
+    new_game()
 
-while True:
+    while True:
 
-    draw(window)
+        draw(window)
 
-    # create button
-    restartButton = button(window, (5, HEIGHT / 10), "Restart")
+        # create button
+        restartButton = button(window, (5, HEIGHT / 10), "Restart")
 
-    # draw scores
-    scoreFont = pygame.font.SysFont("Comic Sans MS", 16)
-    scoreLabel = scoreFont.render("Turns: " + str(turns), True, WHITE)
-    window.blit(scoreLabel, (5, 60))
+        # draw turns label
+        scoreFont = pygame.font.SysFont("Comic Sans MS", 16)
+        scoreLabel = scoreFont.render("Turns: " + str(turns), True, WHITE)
+        window.blit(scoreLabel, (5, 60))
 
-    # mouseclick event listener
-    for event in pygame.event.get():
+        # mouseclick event listener
+        for event in pygame.event.get():
 
-        if event.type == pygame.MOUSEBUTTONDOWN:
-            x, y = pygame.mouse.get_pos()
-            for i in range(75,(75*17),75):
-                if CARD_BACK.get_rect(topleft=(i, 0)).collidepoint(x, y):
-                    mouseclick((x - 75, y))
-            if restartButton.collidepoint(x, y):
-                new_game()
+            if event.type == pygame.MOUSEBUTTONDOWN:
+                x, y = pygame.mouse.get_pos()
+                for i in range(75,(75*17),75):
+                    if CARD_BACK.get_rect(topleft=(i, 0)).collidepoint(x, y):
+                        mouseclick((x - 75, y))
+                if restartButton.collidepoint(x, y):
+                    new_game()
 
-        if event.type == QUIT:
-            pygame.quit()
-            sys.exit()
+            if event.type == QUIT:
+                pygame.quit()
+                sys.exit()
 
-    pygame.display.update()
+        pygame.display.update()
+
+if __name__ == "__main__":
+    main()
 
 
 # Always remember to review the grading rubric
