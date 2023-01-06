@@ -15,7 +15,10 @@ How to win?<br>
 <br><br>
 
 ![image](https://user-images.githubusercontent.com/98131995/210922150-7f49c442-d42c-4107-bdcb-17fc779d6abc.png)<br><br>
-![image](https://user-images.githubusercontent.com/98131995/210922327-2c58846e-e073-4390-b7fd-a18fea0e51c5.png)<br>
+![image](https://user-images.githubusercontent.com/98131995/210922327-2c58846e-e073-4390-b7fd-a18fea0e51c5.png)<br><br>
+![image](https://user-images.githubusercontent.com/98131995/210922555-12028b00-f152-47cc-8cf2-38927a77f820.png)<br><br>
+![image](https://user-images.githubusercontent.com/98131995/210922723-2ee3ab25-d9c9-4a2e-8bcc-e1b3162eb5d5.png)<br><br>
+![image](https://user-images.githubusercontent.com/98131995/210922783-b36e702d-4ce3-4621-b5e1-e07ee7062fa1.png)
 
 
 <br><br>
