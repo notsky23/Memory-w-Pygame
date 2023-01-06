@@ -12,19 +12,24 @@ How to play?<br>
 
 2. Objective is to match the tile by pairs:<br>
   - You flip tiles one at a time<br>
+  ![image](https://user-images.githubusercontent.com/98131995/210925080-27a45227-81e7-445e-8e5c-23e6d9b4c675.png)<br><br>
+
   - Wrong pairing = tiles flip back down and you have to guess the right matching pair again<br>
-  ![image](https://user-images.githubusercontent.com/98131995/210922927-1e801311-6fcf-46ed-b2a5-77bcd14ec1fb.png)<br><br>
+  ![image](https://user-images.githubusercontent.com/98131995/210925153-809e65c5-5990-4321-bffb-8deb51cf36a1.png)<br><br>
+
   - Right pairing = tiles remain flipped up<br>
-  ![image](https://user-images.githubusercontent.com/98131995/210923023-0c03bea1-55b2-4850-88d5-6940c0dcfb40.png)<br><br>
+  ![image](https://user-images.githubusercontent.com/98131995/210925257-2555b8ec-fb44-4c45-8d5b-acd32128408b.png)<br><br>
 
 3. Keep flipping tiles until you complete all pairs for the whole board.<br>
-  ![image](https://user-images.githubusercontent.com/98131995/210923103-7eb255f5-ce4d-46bd-83df-69c03256456c.png)<br><br>
-  ![image](https://user-images.githubusercontent.com/98131995/210923183-a4b7db85-eda9-43fb-9bd4-aab41b7ae043.png)<br><br>
-  ![image](https://user-images.githubusercontent.com/98131995/210923281-ad4232f7-86da-487c-8cc7-d044a0cbaaa8.png)<br><br>
+  ![image](https://user-images.githubusercontent.com/98131995/210925325-b37c139e-19d5-4259-80bf-eb012a03da0d.png)<br><br>
+  ![image](https://user-images.githubusercontent.com/98131995/210925390-04b722b1-2137-4a25-944c-255253460895.png)<br><br>
+  ![image](https://user-images.githubusercontent.com/98131995/210925489-656256e9-a0fd-4f4e-a1db-23efb4f79e8a.png)<br><br>
+  ![image](https://user-images.githubusercontent.com/98131995/210925572-9205e4dc-8f17-4f3f-99d9-2c7d0003f426.png)<br><br>
+  ![image](https://user-images.githubusercontent.com/98131995/210925644-da46288e-730b-42a7-9fcb-b98a7a677cf2.png)<br><br>
   
 4. Once the last tile has been flipped and all tiles are paired, congratulations, you have won the game.
-  ![image](https://user-images.githubusercontent.com/98131995/210923392-ab3cb4d5-1574-4c17-85b0-d323a7cc0b93.png)<br><br>
-  ![image](https://user-images.githubusercontent.com/98131995/210922783-b36e702d-4ce3-4621-b5e1-e07ee7062fa1.png)
+  ![image](https://user-images.githubusercontent.com/98131995/210925695-af247174-fd06-46dd-b1cf-a62dd4e3cce4.png)<br><br>
+  ![image](https://user-images.githubusercontent.com/98131995/210925738-8baa731b-51bf-40e0-9e73-3758913fc2ca.png)<br><br>
 
 5. Try again and beat your personal best. Get the least number of turns when solving the puzzle.
 
