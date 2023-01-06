@@ -7,22 +7,26 @@ Instructions:<br>
 1. This game is similar to Rock Paper Scissors with the added options Spock and Lizard<br>
 
 How to play?<br>
-1. You start off with tiles all face down<br>
+1. You start off with tiles all face down.<br>
 ![image](https://user-images.githubusercontent.com/98131995/210922150-7f49c442-d42c-4107-bdcb-17fc779d6abc.png)<br><br>
 
-2. dsa
-3. 
-<br><br>
+2. Objective is to match the tile by pairs:<br>
+  - You flip tiles one at a time<br>
+  - Wrong pairing = tiles flip back down and you have to guess the right matching pair again<br>
+  ![image](https://user-images.githubusercontent.com/98131995/210922927-1e801311-6fcf-46ed-b2a5-77bcd14ec1fb.png)<br><br>
+  - Right pairing = tiles remain flipped up<br>
+  ![image](https://user-images.githubusercontent.com/98131995/210923023-0c03bea1-55b2-4850-88d5-6940c0dcfb40.png)<br><br>
 
+3. Keep flipping tiles until you complete all pairs for the whole board.<br>
+  ![image](https://user-images.githubusercontent.com/98131995/210923103-7eb255f5-ce4d-46bd-83df-69c03256456c.png)<br><br>
+  ![image](https://user-images.githubusercontent.com/98131995/210923183-a4b7db85-eda9-43fb-9bd4-aab41b7ae043.png)<br><br>
+  ![image](https://user-images.githubusercontent.com/98131995/210923281-ad4232f7-86da-487c-8cc7-d044a0cbaaa8.png)<br><br>
+  
+4. Once the last tile has been flipped and all tiles are paired, congratulations, you have won the game.
+  ![image](https://user-images.githubusercontent.com/98131995/210923392-ab3cb4d5-1574-4c17-85b0-d323a7cc0b93.png)<br><br>
+  ![image](https://user-images.githubusercontent.com/98131995/210922783-b36e702d-4ce3-4621-b5e1-e07ee7062fa1.png)
 
-![image](https://user-images.githubusercontent.com/98131995/210922927-1e801311-6fcf-46ed-b2a5-77bcd14ec1fb.png)<br><br>
-![image](https://user-images.githubusercontent.com/98131995/210923023-0c03bea1-55b2-4850-88d5-6940c0dcfb40.png)<br><br>
-![image](https://user-images.githubusercontent.com/98131995/210923103-7eb255f5-ce4d-46bd-83df-69c03256456c.png)<br><br>
-![image](https://user-images.githubusercontent.com/98131995/210923183-a4b7db85-eda9-43fb-9bd4-aab41b7ae043.png)<br><br>
-![image](https://user-images.githubusercontent.com/98131995/210923281-ad4232f7-86da-487c-8cc7-d044a0cbaaa8.png)<br><br>
-![image](https://user-images.githubusercontent.com/98131995/210923392-ab3cb4d5-1574-4c17-85b0-d323a7cc0b93.png)<br><br>
-![image](https://user-images.githubusercontent.com/98131995/210922783-b36e702d-4ce3-4621-b5e1-e07ee7062fa1.png)
-
+5. Try again and beat your personal best. Get the least number of turns when solving the puzzle.
 
 <br><br>
 Introduction to Programming<br>
