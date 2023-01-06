@@ -1,6 +1,6 @@
 # Memory-w-Pygame
 
-Game: Memory!<br>
+Game: Memory<br>
 w Pygame<br><br>
 
 Instructions:<br>
