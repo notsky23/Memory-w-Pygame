@@ -29,8 +29,3 @@ How to play?<br>
   ![image](https://user-images.githubusercontent.com/98131995/210925738-8baa731b-51bf-40e0-9e73-3758913fc2ca.png)<br><br>
 
 5. Try again and beat your personal best. Get the least number of turns when solving the puzzle.
-
-<br><br>
-Introduction to Programming<br>
-from Rice University coursera Fundamentals of Computing<br>
-converted from codeskulptor to Python 3
