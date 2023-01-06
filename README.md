@@ -14,7 +14,7 @@ How to win?<br>
 5. Spock beats (rock and scissors)
 <br><br>
 
-![image](https://user-images.githubusercontent.com/98131995/210922150-7f49c442-d42c-4107-bdcb-17fc779d6abc.png)<br>
+![image](https://user-images.githubusercontent.com/98131995/210922150-7f49c442-d42c-4107-bdcb-17fc779d6abc.png)<br><br>
 ![image](https://user-images.githubusercontent.com/98131995/210922327-2c58846e-e073-4390-b7fd-a18fea0e51c5.png)<br>
 
 
